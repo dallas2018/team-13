@@ -66,7 +66,7 @@ cursor.execute("""CREATE TABLE Demographic_Info (
 cursor.execute("""DROP TABLE IF EXISTS Work_Auth""")
 
 cursor.execute("""CREATE TABLE Work_Auth (
-	email varchar(50)
+	email varchar(50) NOT NULL PRIMARY KEY
 	citizenship boolean
 	noncitizenship boolean
 	valid_id boolean
@@ -77,7 +77,7 @@ cursor.execute("""CREATE TABLE Work_Auth (
 cursor.execute("""DROP TABLE IF EXISTS Youth""")
 
 cursor.execute("""CREATE TABLE Youth(
-	email varchar(50)
+	email varchar(50) NOT NULL PRIMARY KEY
 	foster boolean
 	p_incarcerate boolean
 	juvie boolean
@@ -96,7 +96,7 @@ cursor.execute("""CREATE TABLE Appointment
 cursor.execute("""DROP TABLE IF EXISTS Household""")
 
 cursor.execute("""CREATE TABLE Household(
-	email varchar(50)
+	email varchar(50) NOT NULL PRIMARY KEY
 	marital_status boolean
 	children int
 	young_adults int
@@ -106,7 +106,7 @@ cursor.execute("""CREATE TABLE Household(
 cursor.execute("""DROP TABLE IF EXISTS Finance""")
 
 cursor.execute("""CREATE TABLE Finance(
-	email varchar(50)
+	email varchar(50) NOT NULL PRIMARY KEY
 	checking boolean
 	savings boolean
 	payday boolean
@@ -118,7 +118,7 @@ cursor.execute("""CREATE TABLE Finance(
 cursor.execute("""DROP TABLE IF EXISTS Background""")
 
 cursor.execute("""CREATE TABLE Background(
-	email varchar(50)
+	email varchar(50) NOT NULL PRIMARY KEY
 	education varchar(20)
 	attending_school boolean
 	computer int
@@ -134,7 +134,7 @@ cursor.execute("""DROP TABLE IF EXISTS Job2""")
 cursor.execute("""DROP TABLE IF EXISTS Job3""")
 
 cursor.execute("""CREATE TABLE Job1(
-	email varchar(50)
+	email varchar(50) NOT NULL PRIMARY KEY
 	title text
 	employer text
 	job_type text
@@ -149,7 +149,7 @@ cursor.execute("""CREATE TABLE Job1(
 )""")
 
 cursor.execute("""CREATE TABLE Job2(
-	email varchar(50)
+	email varchar(50) NOT NULL PRIMARY KEY
 	title text
 	employer text
 	job_type text
@@ -164,7 +164,7 @@ cursor.execute("""CREATE TABLE Job2(
 )""")
 
 cursor.execute("""CREATE TABLE Job3(
-	email varchar(50)
+	email varchar(50) NOT NULL PRIMARY KEY
 	title text
 	employer text
 	job_type text
@@ -181,7 +181,7 @@ cursor.execute("""CREATE TABLE Job3(
 cursor.execute("""DROP TABLE IF EXISTS Needs""")
 
 cursor.execute("""CREATE TABLE Needs(
-	email varchar(50)
+	email varchar(50) NOT NULL PRIMARY KEY
 	interests text
 	availability varchar(30)
 	investment varchar(30)
@@ -193,7 +193,7 @@ cursor.execute("""CREATE TABLE Needs(
 cursor.execute("""DROP TABLE IF EXISTS Questions""")
 
 cursor.execute("""CREATE TABLE Questions(
-	email varchar(50)
+	email varchar(50) NOT NULL PRIMARY KEY
 	church_flyer boolean
 	church_presentation boolean
 	community_flyer boolean
