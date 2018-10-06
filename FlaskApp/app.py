@@ -39,19 +39,19 @@ def demographic():
     homeowner = request.form['Homeowner']
     youthQuestions = request.form['Youth Questions']
 
-@app.route('/appt',method=['POST'])
+@app.route('/appt',methods=['POST'])
 def appt():
     avail = request.form['Availability']
     contactPref = request.form['Contact Preference']
 
-@app.route('/household',method=['POST'])
+@app.route('/household',methods=['POST'])
 def household():
     marital_status = request.form['Marital Status']
     child17Under = request.form['Children 17 and Under']
     youngAdults = request.form['Young Adults 18-24']
     adults = request.form['Adults']
 
-@app.route('/finance',method=['POST'])
+@app.route('/finance',methods=['POST'])
 def finance():
     checking = request.form['Checking']
     saving = request.form['Saving']
@@ -60,7 +60,7 @@ def finance():
     householdIncome = request.form['Household Income']
     publicAssistance = request.form['Public Assistance Benefits Programs']
 
-@app.route('/clientBackground',method=['POST'])
+@app.route('/clientBackground',methods=['POST'])
 def clientBackground():
     educationLevel = request.form['Highest Level of Education']
     currentlyAttending = request.form['Currently Attending School']
@@ -71,7 +71,7 @@ def clientBackground():
     militaryStatus = request.form['Military Status']
     criminal = request.form['Criminal Status']
 
-@app.route('/employerHistory',method=['POST'])
+@app.route('/employerHistory',methods=['POST'])
 def employerHistory():
     empStatus = request.form['Employment Status']
     title1 = request.form['Title 1']
@@ -108,8 +108,8 @@ def employerHistory():
     address3 = request.form['Address 3']
     reasonForLeave3 = request.form['Reason For Leaving 3']
 
-@app.route('/clientNeeds',method=['POST'])
-def employerHistory():
+@app.route('/clientNeeds',methods=['POST'])
+def clientNeeds():
     Interests = request.form['Interests']
     availability = request.form['Availability for job']
     investment = request.form['Investment in job (How long you plan on staying)']
@@ -146,3 +146,6 @@ def process_form(path):
     else:
         if path == "2":
             return render_template("index.2.html")
+
+if __name__ == "__main__":
+    app.run("127.0.0.1", "8080")
