@@ -124,9 +124,51 @@ cursor.execute("""CREATE TABLE Background(
 	incarcerated boolean
 )""")
 
-cursor.execute("""DROP TABLE IF EXISTS Selective_Service""")
+cursor.execute("""DROP TABLE IF EXISTS Job1""")
+cursor.execute("""DROP TABLE IF EXISTS Job2""")
+cursor.execute("""DROP TABLE IF EXISTS Job3""")
 
-cursor.execute("""CREATE TABLE Selective_Service)
+cursor.execute("""CREATE TABLE Job1(
+	title text
+	employer text
+	job_type text
+	commitment text
+	start text
+	end_date text
+	wage float
+	hours int
+	supervisor text
+	address text
+	reason text
+)""")
+
+cursor.execute("""CREATE TABLE Job2(
+	title text
+	employer text
+	job_type text
+	commitment text
+	start text
+	end_date text
+	wage float
+	hours int
+	supervisor text
+	address text
+	reason text
+)""")
+
+cursor.execute("""CREATE TABLE Job3(
+	title text
+	employer text
+	job_type text
+	commitment text
+	start text
+	end_date text
+	wage float
+	hours int
+	supervisor text
+	address text
+	reason text
+)""")
 
 conn.commit()
 
