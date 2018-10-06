@@ -70,6 +70,56 @@ def clientBackground():
     militaryStatus = request.form['Military Status']
     criminal = request.form['Criminal Status']
 
+@app.route('/employerHistory',method=['POST'])
+def employerHistory():
+    empStatus = request.form['Employment Status']
+    title1 = request.form['Title 1']
+    employer1 = request.form['Employer 1']
+    jobType1 = request.form['Job Type 1']
+    Commitment1 = request.form['Commitment 1']
+    start1 = request.form['Start 1']
+    end1 = request.form['End 1']
+    wage1 = request.form['Wage 1']
+    hoursPerWeek1 = request.form['Hours/wk 1']
+    supervisor1 = request.form['Supervisor 1']
+    address1 = request.form['Address 1']
+    reasonForLeave1 = request.form['Reason For Leaving 1']
+    title2 = request.form['Title 2']
+    employer2 = request.form['Employer 2']
+    jobType2 = request.form['Job Type 2']
+    Commitment2 = request.form['Commitment 2']
+    start2 = request.form['Start 2']
+    end2 = request.form['End 2']
+    wage2 = request.form['Wage 2']
+    hoursPerWeek2 = request.form['Hours/wk 2']
+    supervisor2 = request.form['Supervisor 2']
+    address2 = request.form['Address 2']
+    reasonForLeave2 = request.form['Reason For Leaving 2']
+    title3 = request.form['Title 3']
+    employer3 = request.form['Employer 3']
+    jobType3 = request.form['Job Type 3']
+    Commitment3 = request.form['Commitment 3']
+    start3 = request.form['Start 3']
+    end3 = request.form['End 3']
+    wage3 = request.form['Wage 3']
+    hoursPerWeek3 = request.form['Hours/wk 3']
+    supervisor3 = request.form['Supervisor 3']
+    address3 = request.form['Address 3']
+    reasonForLeave3 = request.form['Reason For Leaving 3']
+
+@app.route('/clientNeeds',method=['POST'])
+def employerHistory():
+    Interests = request.form['Interests']
+    availability = request.form['Availability for job']
+    investment = request.form['Investment in job (How long you plan on staying)']
+    whyNotAJob = request.form['What kept you from getting a job and from keeping a job?']
+    wageExpec = request.form['Wage expectation']
+    drugTest = request.form['Drug test']
+    otherQuestions = request.form['Other Questions/Comments']
+    howdYouHear = request.form['How did you hear about SER Jobs for Progress?']
+
+
+
 
 
 if __name__ == "__main__":
