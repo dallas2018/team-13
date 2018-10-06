@@ -1,15 +1,20 @@
 from flask import Flask, render_template, request
 app = Flask(__name__)
 
+app.debug = True
+
 @app.route("/")
 def render():
     return render_template("index.1.html")
 
-@app.route("/api/<path:path>")
+@app.route("/api/<path:path>", methods=['GET', 'POST'])
 def process_form(path):
     if request.method == 'POST':
         if path == "1":
-            print("This is of form 1")
+            _firstname = request.form['firstname']
+            _lastname = request.form['lastname']
+            print(_firstname, _lastname)
+            return render_template("index.2.html")
         elif path == "2":
             print("This is of form 2")
         elif path == "3":
