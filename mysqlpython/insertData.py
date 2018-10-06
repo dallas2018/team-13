@@ -47,3 +47,15 @@ def insert_Finance(args):
 def insert_Background(args):
     query = "Insert into Background(email, education, attending_school, computer, english, certificated, military, convicted, incarcerated)"
     cursor.execute(query,args)
+
+def insert_Job(job,args):
+    query = "Insert into %{job}(email, title, employer, job_type, commitment, start, end_date, wage, hours. supervis. address, reason) VALUES(),"
+    cursor.execute(query,args)
+
+def insert_Needs(args):
+    query = "Insert into Needs(email, interests, availability, investment, getting_job, wage_exp, drug) VALUES()"
+    cursor.execute(query, args)
+
+def insert_Questions(args):
+    query = "Insert into Questions(email, church_flyer, church_presentation, community_flyer, community_agency, guidance counselor, hcc, information_session, interet, job_fair, ser_client, united_way, workforce) VALUES()"
+    cursor.execute(query, args)

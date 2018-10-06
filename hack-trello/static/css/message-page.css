@@ -1,0 +1,137 @@
+html,body
+{
+    font-family: 'Lato','sans-serif';
+    margin:0;
+    padding:0;
+}
+
+html
+{
+            
+    height:100%;
+    background-image: linear-gradient(135deg,#0d1b2a,#1b263b,#415a77,#778da9,#e0e1dd);
+    background-repeat:no-repeat;
+    background-size:cover;
+}
+
+div,p,input
+{
+    margin:0;
+    padding:0;
+}
+
+.header
+{
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    padding:0.1em 1em;
+    height:5em;
+    background:#0d1b2a;
+    color:white;
+}
+
+.loader
+{
+    visibility:hidden;
+    position:absolute;
+    left: calc(50% - 56px);
+    top: calc(50% - 56px);
+    margin: auto;
+    border: 6px solid #f3f3f3;
+    border: 6px solid #0d1b2a;
+    border-radius: 50%;
+    width:90px;
+    height:90px;
+    animation: spin 5s linear infinite;
+    background:black;
+
+}
+
+@keyframes spin
+{
+
+    0% { transform: rotate(0deg);}
+    100% { transform: rotate(360deg);}
+
+}
+
+.org-img-div .org-title-div
+{
+    height:100%;
+}
+
+.org-img-div{
+    width:10%;
+}
+
+#org-img
+{
+    height:100%;
+}
+
+.selection-card
+{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top:2%;
+    margin-bottom:2%;
+    padding:1em;
+    color:#415a77;
+}
+
+.select-message-type, .select-person, .reminder-btn-div
+{
+    width:22%;
+    padding-top:1em;
+    padding-left:2em;
+    padding-right:2em;
+    text-align:left;
+    background:white;
+}
+
+.select-person
+{
+    border-top-left-radius: 0.3em;
+    border-top-right-radius: 0.3em;
+}
+
+.reminder-btn-div
+{
+    border-bottom-left-radius: 0.3em;
+    border-bottom-right-radius: 0.3em;
+    padding-bottom:2em;
+}
+
+.select-label
+{   
+    text-align:left;
+    padding-bottom:0.6em;
+}
+
+#msg-selector
+{
+    width:100%;
+    padding:0.3em;
+    border-radius: 0.2em;
+    border: 0.5px #415a77 solid;
+}
+
+#reminder-btn
+{
+    width:100%;
+    padding:0.4em;
+    background: #0d1b2a;
+    opacity:0.8;
+    border-radius: 0.3em;
+    border: 1px white solid;
+    font-family: 'Lato';
+    color:white;
+}
+
+#reminder-btn:hover
+{
+    opacity:1;
+}

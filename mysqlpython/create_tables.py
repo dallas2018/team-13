@@ -205,7 +205,7 @@ cursor.execute("""CREATE TABLE Questions(
 	job_fair boolean
 	ser_client boolean
 	united_way boolean
-	workforce bookean
+	workforce boolean
 )""")
 
 conn.commit()

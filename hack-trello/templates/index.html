@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Hack Trello</title>
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+
+    <!--Custom CSS-->
+    <link rel="stylesheet" href="../static/css/main.css">
+
+</head>
+<body>
+
+    <!-- Checks to see if there is a valid login error message -->
+    {% if message %}
+
+        <script>
+
+            alert("Please enter a correct username and password combination!")
+
+        </script>
+
+    {% endif %}
+
+    <div class= "overall-content">
+
+        <div class= "content-card">
+        
+            <div class="org-div">
+
+                <img id ="org-img" src="../static/img/logo_current_transparent.png" /><br>
+                <h2 id = "app-title"> Welcome to Hack Trello </h2>
+
+            </div>
+
+            <div class="login-div">
+
+                <form id="login-form" method="POST" action="/handle-login">
+                
+                    <p id ="input-label">Username</p>
+                    <input id="login-input" name="username" type="text" />
+
+                    <p id ="input-label">Password</p>
+                    <input id="login-input" name="password" type="password" />
+                
+                    <input id="login-btn" type="submit" value="Login" />
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+</body>
+</html>
