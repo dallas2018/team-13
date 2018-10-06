@@ -34,7 +34,7 @@ def contactInfo():
 @app.route('/demographics',methods=['POST'])
 def demographic():
     gender = request.form['Gender']
-    race = request.form['Race']
+    race = request.form['Hispanic']
     languages = request.form['Languages']
     work_auth = request.form['Authorized to Work']
     postal_code = request.form['Postal Code']
@@ -131,18 +131,28 @@ def clientNeeds():
 def render():
     return render_template("index.html")
 
-@app.route("/<path:path>.html")
-def fileRouter(path):
-    return render_template("/" + path + ".html")
+# @app.route("/<path:path>.html")
+# def fileRouter(path):
+#     return render_template("/" + path + ".html")
+
+
+# @app.route("/<path:path>.html<path:path2>")
+# def secondFileRouter(path, path2):
+#     print("Hit our second router")
+#     return render_template("/" + path + ".html" + path2)
 
 
 @app.route("/api/", methods=['GET', 'POST'])
 def process_form():
     print("REQUEST:", request.form)
     page = request.headers.get("page")
+    email = request.headers.get("email")
     print("PAGE:", page)
     if page == "1":
         insert_personal(request.form.to_dict(flat = True))
+    if page == "2":
+        insert_Contact_Info(email, request.form.to_dict)
+
     return json.dumps({'success':True}), 200, {'ContentType':'application/json'}
 
 if __name__ == "__main__":
