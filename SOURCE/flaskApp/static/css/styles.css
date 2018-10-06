@@ -1,173 +1,4 @@
-<<<<<<< HEAD
-html, body {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-	width: 100%;
-	height: 100%;
-	font-family: Inter UI,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
-	color: #616161;
-  text-align: center;
-  align-items: center;
-	background-color: #D1D1D1;
-}
 
-body.home{
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-	width: 100%;
-	height: 100%;
-	font-family: Inter UI,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
-	color: #A9A9A9;
-	background-color: white;
-}
-
-a {
-  color: white;
-  text-decoration: none}
-
-.home{
-  text-align: center;
-  align-items: center;
-}
-
-h1.home{
-  font-size: 72px;
-}
-h1{
-	font-family: sans-serif;
-	font-size: 55px;
-}
-.home-text-animation{
-  display: inline-block;
-	animation: type 4s steps(20);
-	overflow:hidden;
-	white-space: nowrap;
-	border-right: 4px transparent #A9A9A9;
-}
-
-@keyframes type {
-	0% {
-		width: 0ch;
-		border-right: 4px solid #A9A9A9;
-	}
-	100% {
-		width: 40ch;
-		border-right: 4px solid #A9A9A9;
-	}
-}
-
-button.home{
-  background-color: #008CBA;
-  font-size: 24px;
-  color: white;
-  border-radius: 4px;
-  border: 2px solid #008CBA;
-  width: 250px;
-  height: 45px;
-}
-
-#myProgress {
-    width: 400px;
-    background-color: grey;
-		align-self: center;
-}
-#myBar {
-    width: 1%;
-    height: 30px;
-    background-color: green;
-		align-self: center;
-}
-
-button{
-	font-size: 24px;
-  color: white;
-  border-radius: 4px;
-  width: 200px;
-  height: 45px;
-	background-color: #008CBA;
-}
-
-.fill{
-	text-align: center;
-	width: 400px;
-	height: 30px;
-	font-size: 25px;
-	border-radius: 4px;
-	font-family: sans-serif;
-}
-.select-gender  input{
-  display: none;
-}
-
-.dob{
-	text-align: right;
-	font-size: 25px;
-	width: 255px;
-	height: 30px;
-	font-family: sans-serif;
-}
-label.select-gender {
-  display: inline-block;
-  width: 100px;
-  height: 50px;
-  text-align: center;
-  border: 1px solid #ddd;
-  line-height: 50px;
-  cursor: pointer
-}
-
-#female:checked ~ label[for="female"],
-#male:checked ~ label[for="male"],
-#other:checked ~ label[for="other"]{
-  background: #999;
-  color: #ffffff;
-}
-
-label[for="female"],
-label[for="male"],
-label[for="other"]{
-	background: white;
-  color: #616161;
-}
-
-.select-race  input{
-  display: none;
-}
-
-label.select-race {
-  display: inline-block;
-  width: 250px;
-  height: 50px;
-  text-align: center;
-  border: 1px solid #ddd;
-  line-height: 50px;
-  cursor: pointer
-}
-
-#hispanic:checked ~ label[for="hispanic"],
-#black:checked ~ label[for="black"],
-#native:checked ~ label[for="native"],
-#asian:checked ~ label[for="asian"],
-#pacific:checked ~ label[for="pacific"],
-#white:checked ~ label[for="white"],
-#other-r:checked ~ label[for="other-r"]{
-  background: #999;
-  color: #ffffff;
-}
-
-label[for="hispanic"],
-label[for="black"],
-label[for="native"],
-label[for="asian"],
-label[for="pacific"],
-label[for="white"],
-label[for="other-r"]{
-	background: white;
-  color: #616161;
-}
-=======
 html, body {
 	margin: 0;
 	padding: 0;
@@ -239,13 +70,69 @@ button.home{
 }
 
 #myProgress {
-    width: 400px;
-    background-color: grey;
+    width: 600px;
+    background-color: white;
+ 			display: inline-block;
+		}
+#myBar1 {
+    width: 0px;
+    height: 30px;
+    background-color: green;
 		align-self: center;
 }
-#myBar {
-    width: 1%;
-    height: 30px;
+
+#myBar2 {
+    width: 75px;
+    height: 10px;
+    background-color: green;
+		align-self: center;
+}
+
+#myBar3 {
+    width:150px;
+    height: 10px;
+    background-color: green;
+		align-self: center;
+}
+
+#myBar4 {
+    width: 225px;
+    height: 10px;
+    background-color: green;
+		align-self: center;
+}
+
+#myBar5 {
+    width: 300px;
+    height: 10px;
+    background-color: green;
+		align-self: center;
+}
+
+#myBar6 {
+    width: 375px;
+    height: 10px;
+    background-color: green;
+		align-self: center;
+}
+
+#myBar7 {
+    width: 450px;
+    height: 10px;
+    background-color: green;
+		align-self: center;
+}
+
+#myBar8 {
+    width: 525px;
+    height: 10px;
+    background-color: green;
+		align-self: center;
+}
+
+#myBar9 {
+    width: 600px;
+    height: 10px;
     background-color: green;
 		align-self: center;
 }
@@ -508,4 +395,111 @@ label[for="work"]{
 	background: white;
   color: #616161;
 }
->>>>>>> afterReversions
+
+.select-married  input{
+  display: none;
+}
+
+label.select-married {
+  display: inline-block;
+  width: 250px;
+  height: 50px;
+  text-align: center;
+  border: 1px solid #ddd;
+  line-height: 50px;
+  cursor: pointer
+	padding: 20px;
+	font-family: sans-serif;
+	font-size: 20px;
+}
+
+#married:checked ~ label[for="married"]{
+  background: #999;
+  color: #ffffff;
+}
+
+label[for="married"]{
+	background: white;
+  color: #616161;
+}
+
+.select-public input{
+  display: none;
+}
+
+label.select-public {
+  display: inline-block;
+  width: 300px;
+  height: 50px;
+  text-align: center;
+  border: 1px solid #ddd;
+  line-height: 50px;
+  cursor: pointer
+	padding: 20px;
+	font-family: sans-serif;
+	font-size: 15px;
+}
+
+.select-loans input{
+  display: none;
+}
+
+label.select-loans {
+  display: inline-block;
+  width: 250px;
+  height: 50px;
+  text-align: center;
+  border: 1px solid #ddd;
+  line-height: 50px;
+  cursor: pointer
+	padding: 20px;
+	font-family: sans-serif;
+	font-size: 20px;
+}
+
+#checking:checked ~ label[for="checking"],
+#savings:checked ~ label[for="savings"],
+#payday:checked ~ label[for="payday"],
+#car-title:checked ~ label[for="car-title"]{
+  background: #999;
+  color: #ffffff;
+}
+
+label[for="checking"],
+label[for="savings"],
+label[for="payday"],
+label[for="car-title"]{
+	background: white;
+  color: #616161;
+}
+
+
+#breakfast:checked ~ label[for="breakfast"],
+#ceap:checked ~ label[for="ceap"],
+#medicaid:checked ~ label[for="medicaid"],
+#smp:checked ~ label[for="smp"],
+#tanf:checked ~ label[for="tanf"],
+#wic:checked ~ label[for="wic"],
+#chip:checked ~ label[for="chip"],
+#headstart:checked ~ label[for="headstart"],
+#sfsp:checked ~ label[for="sfsp"],
+#snap:checked ~ label[for="snap"],
+#wap:checked ~ label[for="wap"]{
+  background: #999;
+  color: #ffffff;
+}
+
+label[for="breakfast"],
+label[for="ceap"],
+label[for="medicaid"],
+label[for="smp"],
+label[for="tanf"],
+label[for="wic"],
+label[for="chip"],
+label[for="headstart"],
+label[for="sfsp"],
+label[for="snap"],
+label[for="wap"]{
+	background: white;
+  color: #616161;
+}
