@@ -18,7 +18,6 @@ def personalInfo():
     ssn = request.form['SSN']
     dob = request.form['DOB']
     email = request.form['Email']
-    
 
 
 @app.route('/contactInfo',methods=['POST'])
