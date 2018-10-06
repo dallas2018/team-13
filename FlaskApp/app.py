@@ -125,7 +125,7 @@ def clientNeeds():
 
 @app.route("/")
 def render():
-    return render_template("index.1.html")
+    return render_template("1.html")
 
 @app.route("/index.2.html")
 def lmao():
