@@ -3,16 +3,16 @@ $(document).ready(function () {
     var url = "http://"+window.location.host
     var APIurl = url + "/api/"
 
-    
+    $("#start").click(function() {
+        window.location.href = "1.html";
+    })
 
     $("#next").click(function() {
-        window.alert(window.location);
-
         var flag = 0;
         // Make sure each element of required class is inputed
         $('.req').each(function(i, obj) {
             if (obj.value == "") {
-                window.alert(obj.name + " is required!");
+                window.alert(obj.placeholder + " is required!");
                 flag = 1;
             }
         });
@@ -25,17 +25,19 @@ $(document).ready(function () {
         // Gather all objects in our form
         var form = $('form').serialize();
         // window.alert(form);
+        var currentPage = parseInt(window.location.pathname.substr(1, window.location.pathname.indexOf('.html')));
 
         // Send to back end
         $.ajax({
             type: "POST",
-            url: APIurl + "1",
+            url: APIurl,
             data: form,
+            headers: {"page": currentPage}
         })
 
+        var nextPage = (currentPage + 1).toString() + ".html"
         // Load next page
-        // $("#form1").load("/index.2.html");
-        window.location.href = "index.2.html";
+        window.location.href = nextPage;
     })
 
 })

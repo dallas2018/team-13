@@ -1,6 +1,9 @@
 from flask import Flask, render_template, request
 import json
+from mysqlpython.insertData import *
 app = Flask(__name__)
+
+email = ""
 
 @app.route("/home")
 def main():
@@ -15,6 +18,7 @@ def personalInfo():
     ssn = request.form['SSN']
     dob = request.form['DOB']
     email = request.form['Email']
+    
 
 
 @app.route('/contactInfo',methods=['POST'])
@@ -125,34 +129,21 @@ def clientNeeds():
 
 @app.route("/")
 def render():
-    return render_template("1.html")
+    return render_template("index.html")
 
-@app.route("/index.2.html")
-def lmao():
-    return render_template("/index.2.html")
+@app.route("/<path:path>.html")
+def fileRouter(path):
+    return render_template("/" + path + ".html")
 
 
-@app.route("/api/<path:path>", methods=['GET', 'POST'])
-def process_form(path):
-    if request.method == 'POST':
-        if path == "1":
-            _firstname = request.form['firstname']
-            _lastname = request.form['lastname']
-            print(_firstname, _lastname)
-            return json.dumps({'success':True}), 200, {'ContentType':'application/json'} 
-
-        elif path == "2":
-            return 
-
-        elif path == "3":
-            print("This is of form 3")
-
-        else:
-            print("We can't accept anything not of path num")
-
-    else:
-        if path == "2":
-            return render_template("index.2.html")
+@app.route("/api/", methods=['GET', 'POST'])
+def process_form():
+    print("REQUEST:", request.form)
+    page = request.headers.get("page")
+    print("PAGE:", page)
+    if page == "1":
+        insert_personal(request.form.to_dict(flat = True))
+    return json.dumps({'success':True}), 200, {'ContentType':'application/json'}
 
 if __name__ == "__main__":
     app.run("127.0.0.1", "8080")

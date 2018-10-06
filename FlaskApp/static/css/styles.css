@@ -70,69 +70,13 @@ button.home{
 }
 
 #myProgress {
-    width: 600px;
-    background-color: white;
- 			display: inline-block;
-		}
-#myBar1 {
-    width: 0px;
+    width: 400px;
+    background-color: black;
+		align: center;
+}
+#myBar {
+    width: 0;
     height: 30px;
-    background-color: green;
-		align-self: center;
-}
-
-#myBar2 {
-    width: 75px;
-    height: 10px;
-    background-color: green;
-		align-self: center;
-}
-
-#myBar3 {
-    width:150px;
-    height: 10px;
-    background-color: green;
-		align-self: center;
-}
-
-#myBar4 {
-    width: 225px;
-    height: 10px;
-    background-color: green;
-		align-self: center;
-}
-
-#myBar5 {
-    width: 300px;
-    height: 10px;
-    background-color: green;
-		align-self: center;
-}
-
-#myBar6 {
-    width: 375px;
-    height: 10px;
-    background-color: green;
-		align-self: center;
-}
-
-#myBar7 {
-    width: 450px;
-    height: 10px;
-    background-color: green;
-		align-self: center;
-}
-
-#myBar8 {
-    width: 525px;
-    height: 10px;
-    background-color: green;
-		align-self: center;
-}
-
-#myBar9 {
-    width: 600px;
-    height: 10px;
     background-color: green;
 		align-self: center;
 }

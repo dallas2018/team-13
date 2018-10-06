@@ -7,26 +7,30 @@
   <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
   <!--Custom CSS-->
   <link rel="stylesheet" href="../static/css/styles.css">
+
+  <script src="/static/jquery-3.2.1.js"></script>
+  <script src="/static/main.js"></script>
+
 </head>
 
 <body>
   <form id="rendered-form"><div class="rendered-form">
     <div class="title"><h1 id="control-4743682">Getting Started</h1></div>
-    <div class="form-fill-in"><label for="text-1538804355187" class="fb-text-label"></label><input type="text" placeholder="First Name" class="form-control" name="text-1538804355187" id="text-1538804355187"></div>
-    <div class="form-fill-in"><label for="text-1538804357320" class="fb-text-label"></label><input type="text" placeholder="Middle Name" class="form-control" name="text-1538804357320" id="text-1538804357320"></div>
-    <div class="form-fill-in"><label for="text-1538804358807" class="fb-text-label"></label><input type="text" placeholder="Last Name" class="form-control" name="text-1538804358807" id="text-1538804358807"></div>
+    <div class="form-fill-in"><label for="text-1538804355187" class="fb-text-label"></label><input class="req" type="text" placeholder="First Name" class="form-control" name="First Name" id="text-1538804355187"></div>
+    <div class="form-fill-in"><label for="text-1538804357320" class="fb-text-label"></label><input type="text" placeholder="Middle Name" class="form-control" name="Middle Name" id="text-1538804357320"></div>
+    <div class="form-fill-in"><label for="text-1538804358807" class="fb-text-label"></label><input class="req" type="text" placeholder="Last Name" class="form-control" name="Last Name" id="text-1538804358807"></div>
     <br/>
     <div class="form-label"><label for="date-1538805109685" class="fb-date-label">Date of Birth</label><br/>
-    <input type="date" class="form-control" name="date-1538805109685" id="date-1538805109685"></div>
+    <input type="date" class="form-control" name="DOB" id="date-1538805109685"></div>
 
     <br/>
-    <div class="form-fill-in"><label for="text-1538804773048" class="fb-text-label"></label><input type="text" placeholder="LinkedIn" class="form-control" name="text-1538804773048" id="text-1538804773048"></div>
+    <div class="form-fill-in"><label for="text-1538804358807" class="fb-text-label"></label><input class="req" type="text" placeholder="Email" class="form-control" name="Email" id="text-1538804358807"></div>
+    <br/>
+    <div class="form-fill-in"><label for="text-1538804708509" class="fb-text-label"></label><input type="text" placeholder="Social Security Number" class="form-control" name="SSN" maxlength="9" id="text-1538804708509"></div></div>
+  </form>
 
     <br/>
-    <div class="form-fill-in"><label for="text-1538804708509" class="fb-text-label"></label><input type="text" placeholder="Social Security Number" class="form-control" name="text-1538804708509" maxlength="9" id="text-1538804708509"></div></div></form>
-
-    <br/>
-    <button type="previous" form="form1" value="Previous"><a href="index.html">Previous</a></button>
-    <button type="continue" form="form1" value="Continue"><a href="2.html">Continue</a></button>
+    <button type="previous" form="form1" value="Previous"><a href="index.html"></a>Previous</a></button>
+    <button type="continue" form="form1" value="Continue" id="next">Continue</a></button>
 </body>
 </html>

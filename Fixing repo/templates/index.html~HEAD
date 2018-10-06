@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="../static/css/styles.css">
 </head>
 
-<body>
+<body class="home">
 <form id="home">
   <div class="home">
     <br/>
