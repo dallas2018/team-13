@@ -86,8 +86,47 @@ cursor.execute("""CREATE TABLE Youth(
 	lack_work boolean
 )""")
 
-cursor.execute("""DROP TABLE IF EXISTS APPOINTMENT""")
+cursor.execute("""DROP TABLE IF EXISTS Appointment""")
 
+cursor.execute("""CREATE TABLE Appointment
+	()"""")
+
+cursor.execute("""DROP TABLE IF EXISTS Household""")
+
+cursor.execute("""CREATE TABLE Household(
+	marital_status boolean
+	children int
+	young_adults int
+	adults int
+)""")
+
+cursor.execute("""DROP TABLE IF EXISTS Finance""")
+
+cursor.execute("""CREATE TABLE Finance(
+	checking boolean
+	savings boolean
+	payday boolean
+	car_title boolean
+	income int
+	public_assist boolean
+)""")
+
+cursor.execute("""DROP TABLE IF EXISTS Background""")
+
+cursor.execute("""CREATE TABLE Background(
+	education varchar(20)
+	attending_school boolean
+	computer int
+	english int
+	certificated text
+	military varchar(40)
+	convicted boolean
+	incarcerated boolean
+)""")
+
+cursor.execute("""DROP TABLE IF EXISTS Selective_Service""")
+
+cursor.execute("""CREATE TABLE Selective_Service)
 
 conn.commit()
 
