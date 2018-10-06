@@ -15,12 +15,17 @@
         <entry file="file://$PROJECT_DIR$/app.py">
           <provider selected="true" editor-type-id="text-editor">
 <<<<<<< HEAD
+            <state relative-caret-position="409">
+              <caret line="109" column="42" lean-forward="true" selection-start-line="109" selection-start-column="42" selection-end-line="109" selection-end-column="42" />
+=======
+<<<<<<< HEAD
             <state relative-caret-position="579">
               <caret line="69" column="49" lean-forward="true" selection-start-line="69" selection-start-column="49" selection-end-line="69" selection-end-column="49" />
 =======
             <state relative-caret-position="443">
               <caret line="61" column="40" lean-forward="false" selection-start-line="61" selection-start-column="40" selection-end-line="61" selection-end-column="40" />
 >>>>>>> 9437d52ce4f40f1d9c92abf676bb273e9ee6d1d7
+>>>>>>> c9d8be7cfa02e4176c7bf5393d635a60f12df68a
               <folding />
             </state>
           </provider>
@@ -176,7 +181,9 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <option name="time" value="1" />
+    </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
@@ -190,12 +197,17 @@
     <entry file="file://$PROJECT_DIR$/app.py">
       <provider selected="true" editor-type-id="text-editor">
 <<<<<<< HEAD
+        <state relative-caret-position="409">
+          <caret line="109" column="42" lean-forward="true" selection-start-line="109" selection-start-column="42" selection-end-line="109" selection-end-column="42" />
+=======
+<<<<<<< HEAD
         <state relative-caret-position="579">
           <caret line="69" column="49" lean-forward="true" selection-start-line="69" selection-start-column="49" selection-end-line="69" selection-end-column="49" />
 =======
         <state relative-caret-position="443">
           <caret line="61" column="40" lean-forward="false" selection-start-line="61" selection-start-column="40" selection-end-line="61" selection-end-column="40" />
 >>>>>>> 9437d52ce4f40f1d9c92abf676bb273e9ee6d1d7
+>>>>>>> c9d8be7cfa02e4176c7bf5393d635a60f12df68a
           <folding />
         </state>
       </provider>
