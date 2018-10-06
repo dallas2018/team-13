@@ -70,7 +70,7 @@ cursor.execute("""CREATE TABLE Work_Auth (
 	noncitizenship boolean
 	valid_id boolean
 	transportation varchar(50)
-	homeowner boolean
+	homeowner varchar(40)
 )""")
 
 cursor.execute("""DROP TABLE IF EXISTS Youth""")
@@ -168,6 +168,34 @@ cursor.execute("""CREATE TABLE Job3(
 	supervisor text
 	address text
 	reason text
+)""")
+
+cursor.execute("""DROP TABLE IF EXISTS Needs""")
+
+cursor.execute("""CREATE TABLE Needs(
+	interests text
+	availability varchar(30)
+	investment varchar(30)
+	getting_job text
+	wage_exp varchar(20)
+	durg_test boolean
+)""")
+
+cursor.execute("""DROP TABLE IF EXISTS Questions""")
+
+cursor.execute("""CREATE TABLE Questions(
+	church_flyer boolean
+	church_presentation boolean
+	community_flyer boolean
+	community_agency boolean
+	guidance_counselor boolean
+	hcc boolean
+	information_session boolean
+	internet boolean
+	job_fair boolean
+	ser_client boolean
+	united_way boolean
+	workforce bookean
 )""")
 
 conn.commit()
