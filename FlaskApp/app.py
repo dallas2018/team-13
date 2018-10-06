@@ -141,7 +141,6 @@ def process_form():
     print("REQUEST:", request.form)
     page = request.headers.get("page")
     print("PAGE:", page)
-    print()
     if page == "1":
         insert_personal(request.form.to_dict(flat = True))
     return json.dumps({'success':True}), 200, {'ContentType':'application/json'}
