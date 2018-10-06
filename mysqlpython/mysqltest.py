@@ -1,8 +1,16 @@
-import mysql.connector
+from flask import Flask
+from flaskext.mysql import MySQL
 
-cnx = mysql.connector(user='team', password = 'team13', database = 'team13db')
+app = Flask(__name__)
+mysql = MySQL()
+app.config['MYSQL_DATABASE_USER'] = 'team'
+app.config['MYSQL_DATABASE_PASSWORD'] = 'team13'
+app.config['MYSQL_DATABASE_DB'] = 'team13db'
+app.config['MYSQL_DATABASE_HOST'] = 'localhost'
+mysql.init_app(app)
 
-cursor = cnx.cursor()
+conn = mysql.connect()
+cursor =conn.cursor()
 
 cursor.execute("""CREATE TABLE Personal (
 	email varchar(50) NOT NULL PRIMARY KEY,
@@ -27,4 +35,4 @@ cursor.execute("""CREATE TABLE Personal (
     e_address TEXT
 )""")
 
-cnx.close()
+conn.close()
