@@ -2,6 +2,8 @@ from flask import Flask, render_template, request
 import json
 app = Flask(__name__)
 
+email = ""
+
 @app.route("/home")
 def main():
     return render_template('index.html')
@@ -15,6 +17,7 @@ def personalInfo():
     ssn = request.form['SSN']
     dob = request.form['DOB']
     email = request.form['Email']
+    
 
 
 @app.route('/contactInfo',methods=['POST'])
