@@ -12,6 +12,6 @@ mysql.init_app(app)
 conn = mysql.connect()
 cursor =conn.cursor()
 
-cursor.execute("INSERT INTO Personal(email, first_name, last_name) VALUES('nikunjjhaveri@gmail.com', 'Nikunj', 'Jhaveri')")
+cursor.execute("INSERT INTO Personal(email, first_name, last_name) VALUES(%s, %s, %s)",("Ninj", "Jhaveri", "nikun"))
 
 conn.commit()
