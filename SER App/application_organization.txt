@@ -1,0 +1,88 @@
+Page 1: Contact Information
+First Name
+Middle Name
+Last Name
+How did you hear about SER Jobs for Progress?
+Street Address
+City
+State
+Postal Code
+County
+SSN
+DOB
+Email
+Home Phone
+Cell Phone
+Work Phone
+FB, Twitter, IG, LinkedIn
+Emergency Contact
+Relationship
+Cell Phone
+Address
+
+Page 2: Demographic Information
+Gender
+Hispanic/Latino
+Race
+Languages
+Work Auth
+Citizenship
+Valid Form of ID -- ID Type -- Driver's License Type
+Transportation
+Homeowner
+Over 24 -- Youth Questions: Foster Care, Parent incarceration, juvie, single-parent, free/reduced lunch, drop out, parent, lack work history
+
+Page 3: Household and Family Information
+Marital Status
+Household Income
+Children 17 and under
+Young adults 18-24
+Adults
+Checking
+Savings
+Payday Loan
+Car Title Loan
+
+Page 4: Public Assistance Benefits
+Programs
+Selective Service
+
+Page 5: Client Background
+Education History
+Highest Level of Education
+Currently Attending School
+Computer Skills
+English Literacy Level
+Certificates/Training
+Military Status -- Veteran, Military Status, Branch
+Criminal Status (Conviction: Crime Detail & Probation/Parole/Incarceration: Detail, Halfway house, ankle monitor)
+
+Page 6: Employer History
+Employment status
+Job History (up to three): 
+Title, 
+Employer, 
+Job Type, 
+Commitment, 
+Start, 
+End, 
+Wage, 
+Hours, 
+Supervisor, 
+Address,
+Reason for leaving
+
+Page 7: Client Needs
+Interests
+Availability
+Investment
+What kept you from getting a job?
+Prevented you from keeping a job?
+Wage expectation
+Drug test
+SER  story
+
+Page 8: Appointment
+Availability (Days/Hours)
+Contact Preference
+Other Questions/Comments
