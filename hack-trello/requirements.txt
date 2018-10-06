@@ -1,8 +1,0 @@
-gunicorn
-py-trello
-requests
-xlrd
-sendgrid
-twilio
-fbchat
-flask
