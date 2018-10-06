@@ -125,34 +125,17 @@ def clientNeeds():
 
 @app.route("/")
 def render():
-    return render_template("1.html")
+    return render_template("index.html")
 
-@app.route("/index.2.html")
-def lmao():
-    return render_template("/index.2.html")
+@app.route("/<path:path>.html")
+def fileRouter(path):
+    return render_template("/" + path + ".html")
 
 
 @app.route("/api/<path:path>", methods=['GET', 'POST'])
 def process_form(path):
-    if request.method == 'POST':
-        if path == "1":
-            _firstname = request.form['firstname']
-            _lastname = request.form['lastname']
-            print(_firstname, _lastname)
-            return json.dumps({'success':True}), 200, {'ContentType':'application/json'} 
-
-        elif path == "2":
-            return 
-
-        elif path == "3":
-            print("This is of form 3")
-
-        else:
-            print("We can't accept anything not of path num")
-
-    else:
-        if path == "2":
-            return render_template("index.2.html")
+    print(request.form)
+    return json.dumps({'success':True}), 200, {'ContentType':'application/json'} 
 
 if __name__ == "__main__":
     app.run("127.0.0.1", "8080")
