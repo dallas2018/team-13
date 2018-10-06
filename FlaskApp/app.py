@@ -1,5 +1,6 @@
 from flask import Flask, render_template, request
 import json
+from mysqlpython.insertData import *
 app = Flask(__name__)
 
 email = ""
@@ -137,10 +138,12 @@ def fileRouter(path):
 
 @app.route("/api/", methods=['GET', 'POST'])
 def process_form():
-    print(request.form)
-    print(request.headers.get("page"))
-    email = request.form.get("Email")
-    return json.dumps({'success':True}), 200, {'ContentType':'application/json'} 
+    print("REQUEST:", request.form)
+    page = request.headers.get("page")
+    print("PAGE:", page)
+    if page == "1":
+        insert_personal(request.form.to_dict(flat = True))
+    return json.dumps({'success':True}), 200, {'ContentType':'application/json'}
 
 if __name__ == "__main__":
     app.run("127.0.0.1", "8080")

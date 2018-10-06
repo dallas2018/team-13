@@ -13,9 +13,11 @@ conn = mysql.connect()
 cursor =conn.cursor()
 
 def insert_personal(args):
-    query = "Insert into Personal(email, first_name, middle_name, last_name, dob, ssn) VALUES(%s, %s, %s, %s, %s)"
-    values = (args["Email"], args["First Name"], args["Middle Name"], args["Last Name"], args["DOB"], args["SSN]"])
-    cursor.execute(query, values)
+    cursor.execute("Insert into Personal(email, first_name, middle_name, last_name, dob, ssn) VALUES(%s, %s, %s, %s, %s, %s)",
+                   (args["Email"], args["First Name"], args["Middle Name"], args["Last Name"], args["DOB"], args["SSN"]))
+
+    conn.commit()
+    conn.close()
 
 def insert_Contact_Info(email, args):
     query = "Insert into Contact_Info(email, address, city, state, postal_code, county, phone) VALUES(%s, %s, %s, %s, %s, %s, %s)"
