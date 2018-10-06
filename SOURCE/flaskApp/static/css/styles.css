@@ -37,6 +37,7 @@ h1.home{
 h1{
 	font-family: sans-serif;
 	font-size: 55px;
+	padding:0
 }
 .home-text-animation{
   display: inline-block;
@@ -88,13 +89,23 @@ button{
 	background-color: #008CBA;
 }
 
+.drop{
+	text-align: center;
+	width: 300px;
+	height: 30px;
+	font-size: 20px;
+	border-radius: 4px;
+	font-family: sans-serif;
+	color: #616161;
+}
+
 .fill{
 	text-align: center;
 	width: 400px;
 	height: 30px;
 	font-size: 25px;
 	border-radius: 4px;
-	font-family: lato;
+	font-family: sans-serif;
 }
 .select-gender  input{
   display: none;
@@ -108,13 +119,14 @@ button{
 	font-family: sans-serif;
 }
 label.select-gender {
-  display: inline-block;
-  width: 100px;
+	display: inline-block;
+  width: 250px;
   height: 50px;
   text-align: center;
   border: 1px solid #ddd;
   line-height: 50px;
   cursor: pointer
+	padding: 20px;
 }
 
 #female:checked ~ label[for="female"],
@@ -143,6 +155,7 @@ label.select-race {
   border: 1px solid #ddd;
   line-height: 50px;
   cursor: pointer
+	padding: 20px;
 }
 
 #hispanic:checked ~ label[for="hispanic"],
@@ -163,6 +176,165 @@ label[for="asian"],
 label[for="pacific"],
 label[for="white"],
 label[for="other-r"]{
+	background: white;
+  color: #616161;
+}
+
+.select-transp  input{
+  display: none;
+}
+
+label.select-transp {
+  display: inline-block;
+  width: 250px;
+  height: 50px;
+  text-align: center;
+  border: 1px solid #ddd;
+  line-height: 50px;
+  cursor: pointer
+	padding: 20px;
+}
+
+#own:checked ~ label[for="own"],
+#borrow:checked ~ label[for="borrow"],
+#public:checked ~ label[for="public"],
+#none:checked ~ label[for="none"]{
+  background: #999;
+  color: #ffffff;
+}
+
+label[for="own"],
+label[for="borrow"],
+label[for="public"],
+label[for="none"]{
+	background: white;
+  color: #616161;
+}
+
+.select-more  input{
+  display: none;
+}
+
+label.select-more {
+  display: inline-block;
+  width: 250px;
+  height: 50px;
+  text-align: center;
+  border: 1px solid #ddd;
+  line-height: 50px;
+  cursor: pointer
+	padding: 20px;
+}
+
+#work-auth:checked ~ label[for="work-auth"],
+#citizen:checked ~ label[for="citizen"],
+#gov-id:checked ~ label[for="gov-id"],
+#license:checked ~ label[for="license"]{
+  background: #999;
+  color: #ffffff;
+}
+
+label[for="work-auth"],
+label[for="citizen"],
+label[for="gov-id"],
+label[for="license"]{
+	background: white;
+  color: #616161;
+}
+
+
+.select-school input{
+  display: none;
+}
+label.select-school{
+	display: inline-block;
+  width: 300px;
+  height: 50px;
+  text-align: center;
+  border: 1px solid #ddd;
+  line-height: 50px;
+  cursor: pointer
+	color: #616161;
+	background-color:white;
+	font-family: sans-serif;
+}
+#current-school:checked~label[for="current-school"]{
+	background: #999;
+	color: #ffffff;
+	font-family: sans-serif;
+}
+
+label[for="current-School"]{
+	background: white;
+	color: #616161;
+	font-family: sans-serif;
+}
+
+.slider {
+    -webkit-appearance: none;
+    width: 300px;
+    height: 15px;
+    border-radius: 5px;
+    background: #000000;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: #4CAF50;
+    cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: #4CAF50;
+    cursor: pointer;
+}
+
+.select-youth  input{
+  display: none;
+}
+
+label.select-youth {
+  display: inline-block;
+  width: 250px;
+  height: 50px;
+  text-align: center;
+  border: 1px solid #ddd;
+  line-height: 50px;
+  cursor: pointer
+	padding: 20px;
+}
+
+#foster:checked ~ label[for="foster"],
+#incarc:checked ~ label[for="incarc"],
+#juvie:checked ~ label[for="juvie"],
+#single-p:checked ~ label[for="single-p"],
+#free:checked ~ label[for="free"],
+#dropout:checked ~ label[for="dropout"],
+#parent:checked ~ label[for="parent"],
+#work:checked ~ label[for="work"]{
+  background: #999;
+  color: #ffffff;
+}
+
+label[for="foster"],
+label[for="incarc"],
+label[for="juvie"],
+label[for="single-p"],
+label[for="free"],
+label[for="dropout"],
+label[for="parent"],
+label[for="work"]{
 	background: white;
   color: #616161;
 }
