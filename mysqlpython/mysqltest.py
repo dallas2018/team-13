@@ -25,7 +25,7 @@ cursor.execute("""CREATE TABLE Personal (
     home_phone varchar(20),
     cell_phone varchar(20),
     work_phone varchar(20),
-    ssn int,
+    ssn ,
     facebook text,
     twitter text,
     linkedIn text,
@@ -34,5 +34,7 @@ cursor.execute("""CREATE TABLE Personal (
     e_cell varchar(20),
     e_address TEXT
 )""")
+
+conn.commit()
 
 conn.close()
