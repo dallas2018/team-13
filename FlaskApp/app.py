@@ -16,6 +16,7 @@ def personalInfo():
     dob = request.form['DOB']
     email = request.form['Email']
 
+
 @app.route('/contactInfo',methods=['POST'])
 def contactInfo():
     street_address = request.form['Street Address']
@@ -85,6 +86,7 @@ def employerHistory():
     supervisor1 = request.form['Supervisor 1']
     address1 = request.form['Address 1']
     reasonForLeave1 = request.form['Reason For Leaving 1']
+
     title2 = request.form['Title 2']
     employer2 = request.form['Employer 2']
     jobType2 = request.form['Job Type 2']
@@ -96,6 +98,7 @@ def employerHistory():
     supervisor2 = request.form['Supervisor 2']
     address2 = request.form['Address 2']
     reasonForLeave2 = request.form['Reason For Leaving 2']
+
     title3 = request.form['Title 3']
     employer3 = request.form['Employer 3']
     jobType3 = request.form['Job Type 3']
@@ -123,6 +126,10 @@ def clientNeeds():
 @app.route("/")
 def render():
     return render_template("index.1.html")
+
+@app.route("/index.2.html")
+def lmao():
+    return render_template("/index.2.html")
 
 
 @app.route("/api/<path:path>", methods=['GET', 'POST'])
