@@ -1,0 +1,90 @@
+html, body {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	width: 100%;
+	height: 100%;
+	font-family: Inter UI,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+	color: #A9A9A9;
+  text-align: center;
+  align-items: center;
+}
+
+.home{
+  text-align: center;
+  align-items: center;
+}
+
+h1.home{
+  font-size: 72px;
+}
+.home-text-animation{
+  display: inline-block;
+	animation: type 4s steps(20);
+	overflow:hidden;
+	white-space: nowrap;
+	border-right: 4px transparent #A9A9A9;
+}
+
+@keyframes type {
+	0% {
+		width: 0ch;
+		border-right: 4px solid #A9A9A9;
+	}
+	100% {
+		width: 40ch;
+		border-right: 4px solid #A9A9A9;
+	}
+}
+
+button.home{
+  background-color: #008CBA;
+  font-size: 24px;
+  color: white;
+}
+
+.select-gender  input{
+  display: none;
+}
+
+label.select-gender {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  border: 1px solid #ddd;
+  line-height: 50px;
+  cursor: pointer
+}
+
+#female:checked ~ label[for="female"],
+#male:checked ~ label[for="male"],
+#other:checked ~ label[for="other"]{
+  background: #999;
+  color: #ffffff;
+}
+
+.select-race  input{
+  display: none;
+}
+
+label.select-race {
+  display: inline-block;
+  width: 250px;
+  height: 50px;
+  text-align: center;
+  border: 1px solid #ddd;
+  line-height: 50px;
+  cursor: pointer
+}
+
+#hispanic:checked ~ label[for="hispanic"],
+#black:checked ~ label[for="black"],
+#native:checked ~ label[for="native"],
+#asian:checked ~ label[for="asian"],
+#pacific:checked ~ label[for="pacific"],
+#white:checked ~ label[for="white"],
+#other-r:checked ~ label[for="other-r"]{
+  background: #999;
+  color: #ffffff;
+}
