@@ -25,15 +25,16 @@ $(document).ready(function () {
         // Gather all objects in our form
         var form = $('form').serialize();
         // window.alert(form);
+        var currentPage = parseInt(window.location.pathname.substr(1, window.location.pathname.indexOf('.html')));
 
         // Send to back end
         $.ajax({
             type: "POST",
-            url: APIurl + "1",
+            url: APIurl,
             data: form,
+            headers: {"page": currentPage}
         })
 
-        var currentPage = parseInt(window.location.pathname.substr(1, window.location.pathname.indexOf('.html')));
         var nextPage = (currentPage + 1).toString() + ".html"
         // Load next page
         window.location.href = nextPage;

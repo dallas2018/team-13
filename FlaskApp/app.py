@@ -135,9 +135,11 @@ def fileRouter(path):
     return render_template("/" + path + ".html")
 
 
-@app.route("/api/<path:path>", methods=['GET', 'POST'])
-def process_form(path):
+@app.route("/api/", methods=['GET', 'POST'])
+def process_form():
     print(request.form)
+    print(request.headers.get("page"))
+    email = request.form.get("Email")
     return json.dumps({'success':True}), 200, {'ContentType':'application/json'} 
 
 if __name__ == "__main__":
