@@ -1,4 +1,5 @@
 from flask import Flask, render_template, request
+import json
 app = Flask(__name__)
 
 app.debug = True
@@ -16,7 +17,7 @@ def personalInfo():
     dob = request.form['DOB']
     email = request.form['Email']
 
-@app.route('/contactInfo',method=['POST'])
+@app.route('/contactInfo',methods=['POST'])
 def contactInfo():
     street_address = request.form['Street Address']
     city = request.form['City']
@@ -26,7 +27,7 @@ def contactInfo():
     postal_code = request.form['Postal Code']
     phone = request.form['Phone']
 
-@app.route('/demographics',method=['POST'])
+@app.route('/demographics',methods=['POST'])
 def demographic():
     gender = request.form['Gender']
     race = request.form['Race']
@@ -39,11 +40,10 @@ def demographic():
     homework = request.form['Homeowner']
 
 
-if __name__ == "__main__":
-    app.run()
 @app.route("/")
 def render():
     return render_template("index.1.html")
+
 
 @app.route("/api/<path:path>", methods=['GET', 'POST'])
 def process_form(path):
@@ -52,15 +52,20 @@ def process_form(path):
             _firstname = request.form['firstname']
             _lastname = request.form['lastname']
             print(_firstname, _lastname)
-            return render_template("index.2.html")
+            return json.dumps({'success':True}), 200, {'ContentType':'application/json'} 
+
         elif path == "2":
-            print("This is of form 2")
+            return 
+
         elif path == "3":
             print("This is of form 3")
+
         else:
             print("We can't accept anything not of path num")
+
     else:
-        print("REQUEST IS NOT POST, UNHANDLED")
+        if path == "2":
+            return render_template("index.2.html")
 
 
 if __name__ == "__main__":
