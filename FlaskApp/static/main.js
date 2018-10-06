@@ -3,7 +3,10 @@ $(document).ready(function () {
     var url = "http://"+window.location.host
     var APIurl = url + "/api/"
 
+    
+
     $("#next").click(function() {
+        window.alert(window.location);
 
         var flag = 0;
         // Make sure each element of required class is inputed
@@ -21,7 +24,7 @@ $(document).ready(function () {
 
         // Gather all objects in our form
         var form = $('form').serialize();
-        window.alert(form);
+        // window.alert(form);
 
         // Send to back end
         $.ajax({
@@ -31,7 +34,8 @@ $(document).ready(function () {
         })
 
         // Load next page
-        $("#form1").load("index.2.html");
+        // $("#form1").load("/index.2.html");
+        window.location.href = "index.2.html";
     })
 
 })

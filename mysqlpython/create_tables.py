@@ -37,7 +37,7 @@ cursor.execute("""CREATE TABLE Contact_Info (
 cursor.execute("DROP TABLE IF EXISTS Demographic_Info")
 
 cursor.execute("""CREATE TABLE Demographic_Info (
-	email varchar(50)
+	email varchar(50) NOT NULL PRIMARY KEY
 	male boolean
 	female boolean
 	white boolean
@@ -51,7 +51,7 @@ cursor.execute("""CREATE TABLE Demographic_Info (
 	german boolean
 	japanese boolean
 	persian boolean
-	russion boolean
+	russian boolean
 	vietnamese boolean
 	na boolean
 	arabic boolean
@@ -66,6 +66,7 @@ cursor.execute("""CREATE TABLE Demographic_Info (
 cursor.execute("""DROP TABLE IF EXISTS Work_Auth""")
 
 cursor.execute("""CREATE TABLE Work_Auth (
+	email varchar(50)
 	citizenship boolean
 	noncitizenship boolean
 	valid_id boolean
@@ -76,6 +77,7 @@ cursor.execute("""CREATE TABLE Work_Auth (
 cursor.execute("""DROP TABLE IF EXISTS Youth""")
 
 cursor.execute("""CREATE TABLE Youth(
+	email varchar(50)
 	foster boolean
 	p_incarcerate boolean
 	juvie boolean
