@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request
-import send_email
+#import send_email
 app = Flask(__name__)
 
 
@@ -10,7 +10,6 @@ def main():
 
 if __name__== "__main__":
     app.run()
-    send_email
 
 
 @app.route('/test')
